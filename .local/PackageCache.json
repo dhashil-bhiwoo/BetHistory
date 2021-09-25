@@ -59,7 +59,7 @@
         "C:\\Users\\bouzzz\\.nuget\\packages\\csvhelper/2.13.5\\lib/net40-client/CsvHelper.dll",
         "C:\\Users\\bouzzz\\.nuget\\packages\\microsoft.aspnet.signalr.client/2.4.0\\lib/net45/Microsoft.AspNet.SignalR.Client.dll",
         "C:\\Users\\bouzzz\\.nuget\\packages\\microsoft.rest.clientruntime/2.3.20\\lib/net461/Microsoft.Rest.ClientRuntime.dll",
-        "C:\\Users\\bouzzz\\.nuget\\packages\\newtonsoft.json/11.0.2\\lib/net45/Newtonsoft.Json.dll",
+        "C:\\Users\\bouzzz\\.nuget\\packages\\newtonsoft.json/13.0.1\\lib/net45/Newtonsoft.Json.dll",
         "C:\\Users\\bouzzz\\.nuget\\packages\\uipath.system.activities/20.4.0\\lib/net461/ActiproSoftware.Docking.Wpf.dll",
         "C:\\Users\\bouzzz\\.nuget\\packages\\uipath.system.activities/20.4.0\\lib/net461/ActiproSoftware.Ribbon.Wpf.dll",
         "C:\\Users\\bouzzz\\.nuget\\packages\\uipath.system.activities/20.4.0\\lib/net461/ActiproSoftware.Shared.Wpf.dll",
@@ -88,7 +88,7 @@
         "C:\\Users\\bouzzz\\.nuget\\packages\\extended.wpf.toolkit/2.8.0\\lib/net40/Xceed.Wpf.AvalonDock.dll",
         "C:\\Users\\bouzzz\\.nuget\\packages\\extended.wpf.toolkit/2.8.0\\lib/net40/Xceed.Wpf.DataGrid.dll",
         "C:\\Users\\bouzzz\\.nuget\\packages\\extended.wpf.toolkit/2.8.0\\lib/net40/Xceed.Wpf.Toolkit.dll",
-        "C:\\Users\\bouzzz\\.nuget\\packages\\newtonsoft.json/11.0.2\\lib/net45/Newtonsoft.Json.dll",
+        "C:\\Users\\bouzzz\\.nuget\\packages\\newtonsoft.json/13.0.1\\lib/net45/Newtonsoft.Json.dll",
         "C:\\Users\\bouzzz\\.nuget\\packages\\system.io.abstractions/3.0.10\\lib/net40/System.IO.Abstractions.dll",
         "C:\\Users\\bouzzz\\.nuget\\packages\\system.threading.tasks.dataflow/4.10.0\\lib/netstandard2.0/System.Threading.Tasks.Dataflow.dll",
         "C:\\Users\\bouzzz\\.nuget\\packages\\system.valuetuple/4.5.0\\lib/net461/System.ValueTuple.dll",
@@ -121,6 +121,22 @@
         "C:\\Users\\bouzzz\\.nuget\\packages\\uipath.word.activities/1.4.3\\lib/net461/UiPath.Word.dll"
       ],
       "Path": "C:\\Users\\bouzzz\\.nuget\\packages\\uipath.word.activities\\1.4.3"
+    },
+    {
+      "Package": {
+        "Id": "Google.Apis.Gmail.v1",
+        "Version": "1.55.0.2356"
+      },
+      "Assemblies": [
+        "C:\\Users\\bouzzz\\.nuget\\packages\\google.apis/1.55.0\\lib/net45/Google.Apis.dll",
+        "C:\\Users\\bouzzz\\.nuget\\packages\\google.apis/1.55.0\\lib/net45/Google.Apis.PlatformServices.dll",
+        "C:\\Users\\bouzzz\\.nuget\\packages\\google.apis.auth/1.55.0\\lib/net461/Google.Apis.Auth.dll",
+        "C:\\Users\\bouzzz\\.nuget\\packages\\google.apis.auth/1.55.0\\lib/net461/Google.Apis.Auth.PlatformServices.dll",
+        "C:\\Users\\bouzzz\\.nuget\\packages\\google.apis.core/1.55.0\\lib/net45/Google.Apis.Core.dll",
+        "C:\\Users\\bouzzz\\.nuget\\packages\\google.apis.gmail.v1/1.55.0.2356\\lib/net45/Google.Apis.Gmail.v1.dll",
+        "C:\\Users\\bouzzz\\.nuget\\packages\\newtonsoft.json/13.0.1\\lib/net45/Newtonsoft.Json.dll"
+      ],
+      "Path": "C:\\Users\\bouzzz\\.nuget\\packages\\google.apis.gmail.v1\\1.55.0.2356"
     }
   ],
   "Conflicts": [],
@@ -165,6 +181,54 @@
       "Version": "2.8.0",
       "Dependencies": []
     },
+    "Google.Apis": {
+      "Id": "Google.Apis",
+      "Version": "1.55.0",
+      "Dependencies": [
+        {
+          "Item1": "Google.Apis.Core",
+          "Item2": "[1.55.0, )"
+        }
+      ]
+    },
+    "Google.Apis.Auth": {
+      "Id": "Google.Apis.Auth",
+      "Version": "1.55.0",
+      "Dependencies": [
+        {
+          "Item1": "Google.Apis.Core",
+          "Item2": "[1.55.0, )"
+        },
+        {
+          "Item1": "Google.Apis",
+          "Item2": "[1.55.0, )"
+        }
+      ]
+    },
+    "Google.Apis.Core": {
+      "Id": "Google.Apis.Core",
+      "Version": "1.55.0",
+      "Dependencies": [
+        {
+          "Item1": "Newtonsoft.Json",
+          "Item2": "[13.0.1, )"
+        }
+      ]
+    },
+    "Google.Apis.Gmail.v1": {
+      "Id": "Google.Apis.Gmail.v1",
+      "Version": "1.55.0.2356",
+      "Dependencies": [
+        {
+          "Item1": "Google.Apis",
+          "Item2": "[1.55.0, )"
+        },
+        {
+          "Item1": "Google.Apis.Auth",
+          "Item2": "[1.55.0, )"
+        }
+      ]
+    },
     "interop.domino.dll": {
       "Id": "interop.domino.dll",
       "Version": "1.0.0",
@@ -202,7 +266,7 @@
     },
     "Newtonsoft.Json": {
       "Id": "Newtonsoft.Json",
-      "Version": "11.0.2",
+      "Version": "13.0.1",
       "Dependencies": []
     },
     "NPOI": {
@@ -497,6 +561,48 @@
     },
     {
       "Package": {
+        "Id": "Google.Apis",
+        "Version": "1.55.0"
+      },
+      "Assemblies": [
+        "C:\\Users\\bouzzz\\.nuget\\packages\\google.apis\\1.55.0\\lib\\net45\\Google.Apis.dll",
+        "C:\\Users\\bouzzz\\.nuget\\packages\\google.apis\\1.55.0\\lib\\net45\\Google.Apis.PlatformServices.dll"
+      ],
+      "Path": "C:\\Users\\bouzzz\\.nuget\\packages\\google.apis\\1.55.0"
+    },
+    {
+      "Package": {
+        "Id": "Google.Apis.Auth",
+        "Version": "1.55.0"
+      },
+      "Assemblies": [
+        "C:\\Users\\bouzzz\\.nuget\\packages\\google.apis.auth\\1.55.0\\lib\\net461\\Google.Apis.Auth.dll",
+        "C:\\Users\\bouzzz\\.nuget\\packages\\google.apis.auth\\1.55.0\\lib\\net461\\Google.Apis.Auth.PlatformServices.dll"
+      ],
+      "Path": "C:\\Users\\bouzzz\\.nuget\\packages\\google.apis.auth\\1.55.0"
+    },
+    {
+      "Package": {
+        "Id": "Google.Apis.Core",
+        "Version": "1.55.0"
+      },
+      "Assemblies": [
+        "C:\\Users\\bouzzz\\.nuget\\packages\\google.apis.core\\1.55.0\\lib\\net45\\Google.Apis.Core.dll"
+      ],
+      "Path": "C:\\Users\\bouzzz\\.nuget\\packages\\google.apis.core\\1.55.0"
+    },
+    {
+      "Package": {
+        "Id": "Google.Apis.Gmail.v1",
+        "Version": "1.55.0.2356"
+      },
+      "Assemblies": [
+        "C:\\Users\\bouzzz\\.nuget\\packages\\google.apis.gmail.v1\\1.55.0.2356\\lib\\net45\\Google.Apis.Gmail.v1.dll"
+      ],
+      "Path": "C:\\Users\\bouzzz\\.nuget\\packages\\google.apis.gmail.v1\\1.55.0.2356"
+    },
+    {
+      "Package": {
         "Id": "interop.domino.dll",
         "Version": "1.0.0"
       },
@@ -549,12 +655,12 @@
     {
       "Package": {
         "Id": "Newtonsoft.Json",
-        "Version": "11.0.2"
+        "Version": "13.0.1"
       },
       "Assemblies": [
-        "C:\\Users\\bouzzz\\.nuget\\packages\\newtonsoft.json\\11.0.2\\lib\\net45\\Newtonsoft.Json.dll"
+        "C:\\Users\\bouzzz\\.nuget\\packages\\newtonsoft.json\\13.0.1\\lib\\net45\\Newtonsoft.Json.dll"
       ],
-      "Path": "C:\\Users\\bouzzz\\.nuget\\packages\\newtonsoft.json\\11.0.2"
+      "Path": "C:\\Users\\bouzzz\\.nuget\\packages\\newtonsoft.json\\13.0.1"
     },
     {
       "Package": {
