@@ -2640,9 +2640,9 @@
     "restore": {
       "projectUniqueName": "BetHistory_v1",
       "projectName": "BetHistory_v1",
-      "projectPath": "C:\\Users\\bouzzz\\Documents\\UiPath\\BetHistory_v1\\.local",
+      "projectPath": "C:\\Users\\bouzzz\\Documents\\GitHub\\BetHistory\\.local",
       "packagesPath": "C:\\Users\\bouzzz\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\bouzzz\\Documents\\UiPath\\BetHistory_v1\\.local"
+      "outputPath": "C:\\Users\\bouzzz\\Documents\\GitHub\\BetHistory\\.local"
     },
     "frameworks": {
       "net461": {
